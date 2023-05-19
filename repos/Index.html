@@ -2,11 +2,34 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>View360</title>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
-    <img src="images/POO.png" alt="minha página de teste">
-    <p>Meu projeto</p>
+    <div id="card">
+        
+    <h2><center>Rotacione o produto usando seu mouse</center></h2>
+    <div id="product_viewer"></div>  
+    </div>  
+    
+    <script src="js/product-viewer.js"></script>
+
+    <script>
+        var productViewer = new ProductViewer ({
+        element: document.getElementById('product_viewer'),
+        imagePath: './images',
+        filePrefix: 'img',
+        fileExtension: '.jpg'
+        });
+
+        ProductViewer.once('loaded', function (){
+        ProductViewer.animate360();
+        })
+
+    </script>
+
   </body>
 </html>

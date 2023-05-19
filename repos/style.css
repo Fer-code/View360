@@ -1,0 +1,21 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+#card{
+	margin: 50px auto;
+}
+
+#product_viewer {
+	max-width: 50%;
+	margin: 10px auto;
+    border-style: groove;
+    border-radius: 10px;
+}
+
+#product_viewer img {
+	display: block;
+	width: 100%;
+}
